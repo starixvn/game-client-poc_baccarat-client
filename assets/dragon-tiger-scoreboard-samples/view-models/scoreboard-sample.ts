@@ -1,5 +1,8 @@
 import * as cc from "cc";
-import { Foo } from "db://game-client-component/foo";
+import {
+  BigRoad,
+  BigRoadOptions,
+} from "../../../extensions/game-client-components/assets";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
