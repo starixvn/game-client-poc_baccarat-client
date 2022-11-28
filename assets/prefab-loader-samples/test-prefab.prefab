@@ -50,7 +50,7 @@
       "y": 1,
       "z": 1
     },
-    "_layer": 1073741824,
+    "_layer": 33554432,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -98,7 +98,7 @@
       "y": 1,
       "z": 1
     },
-    "_layer": 1073741824,
+    "_layer": 33554432,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -120,7 +120,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 125.64,
+      "width": 239.45,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -155,7 +155,7 @@
       "b": 255,
       "a": 255
     },
-    "_string": "label in prefab",
+    "_string": "label in prefab updated 111",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 20,
@@ -201,7 +201,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
+      "width": 200,
       "height": 100
     },
     "_anchorPoint": {
