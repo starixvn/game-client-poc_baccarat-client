@@ -4,5 +4,13 @@
   "version": "3.6.1",
   "creator": {
     "version": "3.6.1"
+  },
+  "scripts": {
+    "build-web-mobile": "C:\\CocosDashboard_1.0.9\\resources\\.editors\\Creator\\3.6.1\\CocosCreator.exe --project ./ --build \"platform=web-mobile;debug=false\"",
+    "\n# IMAGE SCRIPTS:": "",
+    "image:create": "docker build -t cocos-web-mobile .",
+    "image:remove": "docker rm cocos-web-mobile-container -f & docker rmi cocos-web-mobile:latest -f",
+    "image:update": "docker rmi cocos-web-mobile:latest -f & docker build -t cocos-web-mobile .",
+    "image:run": "docker run --name cocos-web-mobile-container -dp 8188:80 cocos-web-mobile"
   }
 }
