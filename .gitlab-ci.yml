@@ -1,0 +1,16 @@
+stages:
+  - build
+
+build-cocos:
+  stage: build
+  tags:
+    - ricky-cocos-3
+  script:
+    - npm run build-web-mobile
+  artifacts:
+    when: always
+    paths:
+      - ./build/web-mobile
+    expire_in: 1 day
+  allow_failure:
+    exit_codes: 36
