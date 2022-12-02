@@ -12,5 +12,13 @@
     "image:remove": "docker rm cocos-web-mobile-container -f & docker rmi cocos-web-mobile:latest -f",
     "image:update": "docker rmi cocos-web-mobile:latest -f & docker build -t cocos-web-mobile .",
     "image:run": "docker run --name cocos-web-mobile-container -dp 8188:80 cocos-web-mobile"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "mobx": "^6.7.0",
+    "mobx-cocos": "^1.1.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191"
   }
 }
