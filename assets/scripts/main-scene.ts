@@ -7,11 +7,13 @@ import mobx from "mobx";
 import { componentStore } from "../mobx-tests/store";
 
 import mobxCocos from "mobx-cocos";
-const { render } = mobxCocos;
-const { autorun } = mobx;
+const { render, observer } = mobxCocos;
+const { autorun, configure } = mobx;
 
-@ccclass("MainScene")
-@mobxCocos.observer
+configure({ enforceActions: "observed" });
+
+@observer
+@ccclass
 export class MainScene extends Component {
   @property(cc.Label)
   counterText: cc.Label = null;
@@ -22,12 +24,14 @@ export class MainScene extends Component {
     console.log(test);
 
     autorun(() => {
-      console.log("Tasks left with delay: " + componentStore.counter);
+      //console.log("Tasks left with delay: " + componentStore.counter);
+      this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
     });
   }
 
   @render protected renderCounter() {
-    this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
+    // this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
+    // console.log("Tasks left with delay: " + componentStore.counter);
   }
 
   protected increaseCounter() {
