@@ -1,17 +1,6 @@
 {
-  "name": "dragon-tiger-client-src",
-  "uuid": "d1221bec-ebef-4e93-a25e-49807bffc8f3",
-  "version": "3.6.1",
   "creator": {
-    "version": "3.6.1"
-  },
-  "scripts": {
-    "build-web-mobile": "C:\\CocosDashboard_1.0.9\\resources\\.editors\\Creator\\3.6.1\\CocosCreator.exe --project ./ --build \"platform=web-mobile;debug=false\"",
-    "\n# IMAGE SCRIPTS:": "",
-    "image:create": "docker build -t cocos-web-mobile .",
-    "image:remove": "docker rm cocos-web-mobile-container -f & docker rmi cocos-web-mobile:latest -f",
-    "image:update": "docker rmi cocos-web-mobile:latest -f & docker build -t cocos-web-mobile .",
-    "image:run": "docker run --name cocos-web-mobile-container -dp 8188:80 cocos-web-mobile"
+    "version": "3.6.2"
   },
   "dependencies": {
     "lodash": "^4.17.21",
@@ -20,5 +9,19 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.191"
-  }
+  },
+  "name": "dragon-tiger-client-src",
+  "scripts": {
+    "\n# IMAGE SCRIPTS:": "",
+    "build-web-mobile": "C:\\CocosDashboard_1.0.9\\resources\\.editors\\Creator\\3.6.2\\CocosCreator.exe --project ./ --build \"platform=web-mobile;debug=false\"",
+    "build-web-mobile-ci": "C:\\cocos-editors\\resources\\.editors\\Creator\\3.6.2\\CocosCreator.exe --project ./ --build \"platform=web-mobile;debug=false\"",
+    "image:create": "docker build -t cocos-web-mobile .",
+    "image:remove": "docker rm cocos-web-mobile-container -f & docker rmi cocos-web-mobile:latest -f",
+    "image:run": "docker run --name cocos-web-mobile-container -dp 8188:80 cocos-web-mobile",
+    "image:update": "docker rmi cocos-web-mobile:latest -f & docker build -t cocos-web-mobile .",
+    "install-game-client-base": "cd ./extensions/game-client-base && call npm install",
+    "install-game-client-components": "cd ./extensions/game-client-components && npm install"
+  },
+  "uuid": "d1221bec-ebef-4e93-a25e-49807bffc8f3",
+  "version": "3.6.2"
 }

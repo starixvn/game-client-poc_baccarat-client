@@ -6,36 +6,51 @@ import mobx from "mobx";
 
 import { componentStore } from "../mobx-tests/store";
 
-import mobxCocos from "mobx-cocos";
-const { render, observer } = mobxCocos;
+import { MobxComponent } from "db://game-client-base/utils/mobxCocos";
+//import { MobxMainComponent } from "./mobx-cocos-main";
 const { autorun, configure } = mobx;
 
-configure({ enforceActions: "observed" });
+configure({ enforceActions: "observed", useProxies: "ifavailable" });
 
-@observer
 @ccclass
-export class MainScene extends Component {
+export class MainScene extends MobxComponent {
   @property(cc.Label)
   counterText: cc.Label = null;
 
   start() {
     this.schedule(this.increaseCounter, 1);
     const test = _.defaults({ a: 1 }, { a: 3, b: 2 });
-    console.log(test);
+    //console.log(test);
 
     autorun(() => {
-      //console.log("Tasks left with delay: " + componentStore.counter);
-      this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
+      // console.log("Tasks left with delay: " + componentStore.counter);
+      // this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
     });
   }
 
-  @render protected renderCounter() {
-    // this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
+  onLoad() {
+    this.componentName = MainScene.name;
+    console.log(this);
+    (this.__autorun || (this.__autorun = [])).push("renderCounter");
+    super.onLoad();
+  }
+
+  public renderCounter() {
+    this.counterText.string = `Main Computed: ${componentStore.doubleCounter.toString()}`;
+    console.log("Tasks left with delay: " + componentStore.counter);
     // console.log("Tasks left with delay: " + componentStore.counter);
   }
 
   protected increaseCounter() {
     componentStore.increaseCounter();
+
+    if (componentStore.counter == 10) {
+      this.unschedule(this.increaseCounter);
+    }
+  }
+
+  changeState() {
+    componentStore.val1 = Math.random();
   }
 
   loadPrefabLoaderSamples() {

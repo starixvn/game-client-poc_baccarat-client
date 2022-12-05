@@ -1,12 +1,21 @@
+variables:
+     GIT_SUBMODULE_STRATEGY: recursive
+     CI_JOB_TOKEN: es7VysP4Bek_M3ksbdyp
+
 stages:
   - build
 
 build-cocos:
   stage: build
   tags:
-    - ricky-cocos-3
+    - runner-windows
   script:
-    - npm run build-web-mobile
+    - call npm install
+    - cd ./extensions/game-client-components && call npm install
+    - cd ..
+    - cd game-client-base && call npm install
+    - cd ../../
+    - npm run build-web-mobile-ci
   artifacts:
     when: always
     paths:
