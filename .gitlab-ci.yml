@@ -44,7 +44,7 @@ variables:
 .base_build_cocos_web_l1_baccarat_client_test:
   <<: *build_cocos_creator_script
   extends:
-    - .deploy_vars_l1_baccarat_client_client_test
+    - .deploy_vars_l1_baccarat_client_test
     - .build:image:l1_baccarat_client_test:rules
   allow_failure: true
 # stages:
