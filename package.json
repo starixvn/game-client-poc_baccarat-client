@@ -21,7 +21,7 @@
     "image:remove": "docker rm cocos-web-mobile-container -f & docker rmi cocos-web-mobile:latest -f",
     "image:run": "docker run --name cocos-web-mobile-container -dp 8188:80 cocos-web-mobile",
     "image:update": "docker rmi cocos-web-mobile:latest -f & docker build -t cocos-web-mobile .",
-    "install-game-client-base": "cd ./extensions/game-client-base && call npm install",
+    "install-game-client-base": "cd ./extensions/game-client-base && npm install",
     "install-game-client-components": "cd ./extensions/game-client-components && npm install"
   },
   "uuid": "d1221bec-ebef-4e93-a25e-49807bffc8f3",

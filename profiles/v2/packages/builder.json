@@ -10,7 +10,7 @@
     "outputName": "web-mobile",
     "mainBundleCompressionType": "none",
     "platform": "web-mobile",
-    "startScene": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+    "startScene": "943b0849-94f5-47db-b7b3-f1c03d325d10",
     "scenes": [
       {
         "url": "db://game-client-component/prefab-loader/samples/prefab-loader-tests.scene",
@@ -23,18 +23,13 @@
         "inBundle": false
       },
       {
-        "url": "db://assets/experiments/main.scene",
-        "uuid": "f20a528d-615d-42f8-81b0-a01ab41ad513",
-        "inBundle": false
-      },
-      {
-        "url": "db://assets/dragon-tiger/dragon-tiger.scene",
-        "uuid": "09865db2-6724-4015-8b10-b31256764b2b",
-        "inBundle": false
-      },
-      {
         "url": "db://assets/lobby/lobby-main.scene",
         "uuid": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+        "inBundle": false
+      },
+      {
+        "url": "db://assets/baccarat/baccarat.scene",
+        "uuid": "943b0849-94f5-47db-b7b3-f1c03d325d10",
         "inBundle": false
       }
     ],
@@ -52,7 +47,7 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "12-15-2022 11:27:57 Build success in 112152 ms!",
+        "message": "12-16-2022 09:30:01 Build success in 74316 ms!",
         "options": {
           "name": "dragon-tiger-client-src",
           "platform": "web-mobile",
@@ -70,7 +65,7 @@
           "mainBundleIsRemote": false,
           "mainBundleCompressionType": "none",
           "replaceSplashScreen": false,
-          "startScene": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+          "startScene": "943b0849-94f5-47db-b7b3-f1c03d325d10",
           "outputName": "web-mobile",
           "scenes": [
             {
@@ -84,18 +79,13 @@
               "inBundle": false
             },
             {
-              "url": "db://assets/experiments/main.scene",
-              "uuid": "f20a528d-615d-42f8-81b0-a01ab41ad513",
-              "inBundle": false
-            },
-            {
-              "url": "db://assets/dragon-tiger/dragon-tiger.scene",
-              "uuid": "09865db2-6724-4015-8b10-b31256764b2b",
-              "inBundle": false
-            },
-            {
               "url": "db://assets/lobby/lobby-main.scene",
               "uuid": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+              "inBundle": false
+            },
+            {
+              "url": "db://assets/baccarat/baccarat.scene",
+              "uuid": "943b0849-94f5-47db-b7b3-f1c03d325d10",
               "inBundle": false
             }
           ],
@@ -120,7 +110,7 @@
             ]
           }
         },
-        "time": "12-15-2022 11:26",
+        "time": "12-16-2022 09:28",
         "dirty": false
       }
     }

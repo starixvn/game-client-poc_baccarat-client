@@ -7,7 +7,7 @@
     },
     "mainBundleCompressionType": "none",
     "platform": "web-mobile",
-    "startScene": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+    "startScene": "943b0849-94f5-47db-b7b3-f1c03d325d10",
     "scenes": [
       {
         "url": "db://game-client-component/prefab-loader/samples/prefab-loader-tests.scene",
@@ -20,18 +20,13 @@
         "inBundle": false
       },
       {
-        "url": "db://assets/experiments/main.scene",
-        "uuid": "f20a528d-615d-42f8-81b0-a01ab41ad513",
-        "inBundle": false
-      },
-      {
-        "url": "db://assets/dragon-tiger/dragon-tiger.scene",
-        "uuid": "09865db2-6724-4015-8b10-b31256764b2b",
-        "inBundle": false
-      },
-      {
         "url": "db://assets/lobby/lobby-main.scene",
         "uuid": "26b77992-ed84-4cf9-83b0-b921ffdbcf20",
+        "inBundle": false
+      },
+      {
+        "url": "db://assets/baccarat/baccarat.scene",
+        "uuid": "943b0849-94f5-47db-b7b3-f1c03d325d10",
         "inBundle": false
       }
     ],

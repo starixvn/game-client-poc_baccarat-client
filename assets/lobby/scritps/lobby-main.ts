@@ -4,6 +4,7 @@ const { ccclass } = _decorator;
 export class LobbyMain extends Component {
   sceneMapping = {
     "1": "dragon-tiger",
+    "2": "baccarat",
   };
 
   loadGame(event, gameId: number) {
